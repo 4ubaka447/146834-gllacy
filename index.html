@@ -56,7 +56,7 @@
               <input type="password" name="search" value="Пароль">
               <a class="modal-login__button" href="#">Забыли пароль?</a>
               <a class="modal-login__button" href="#">Новая регистрация</a>
-              <input type="submit" name="login" value="Войти">
+              <input type="submit" value="Войти">
             </form>
           </div>
         </li>
@@ -69,11 +69,11 @@
       </ul>
     </div>
 
-    <div class="main-header__contacts">
-      <p class="main-header__contacts__text main-header__contacts__text_info">
+    <div class="main-header__contacts header-contacts">
+      <p class="header-contacts__text">
         С 10 до 20, ежедневно
       </p>
-      <p class="main-header__contacts__text main-header__contacts__text_phone">
+      <p class="header-contacts__text header-contacts__text--phone">
         8 812 450-25-25
       </p>
     </div>
@@ -127,38 +127,38 @@
       <h2 class="visually-hidden">Хиты</h2>
       <ul class="products__list">
         <!-- 1 -->
-        <li class="products__item hit_token">
-          <img class="products__image" src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+        <li class="products__item products__item--hit-token">
+          <img class="products__image" src="img/product-1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
           <span class="products__price">310</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 2 -->
-        <li class="products__item hit_token">
-          <img class="products__image" src="img/2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+        <li class="products__item products__item--hit-token">
+          <img class="products__image" src="img/product-2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
           <span class="products__price">380</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочно-кофейное с кусочками шоколада</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 3 -->
-        <li class="products__item  hit_token">
-          <img class="products__image" src="img/3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+        <li class="products__item  products__item--hit-token">
+          <img class="products__image" src="img/product-3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
           <span class="products__price">355</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочно-клубничное с присыпкой из белого шоколада</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 4 -->
-        <li class="products__item hit_token">
-          <img class="products__image" src="img/4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+        <li class="products__item products__item--hit-token">
+          <img class="products__image" src="img/product-4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
           <span class="products__price">415</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочное крем-брюле с карамельной подливкой</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
@@ -196,7 +196,7 @@
       <!-- форма ввода почтового адреса -->
       <form class="appointment__email-form" action="index.html" method="post">
         <input type="email" name="email" value="Электронная почта">
-        <input type="submit" name="send-email" value="Отправить">
+        <input type="submit" value="Отправить">
       </form>
 
     </section>
@@ -222,18 +222,6 @@
 
         <a class="map__button button" type="button" name="feedback-button">Форма обратной связи</a>
 
-        <!-- Скрытая форма -->
-        <div class="modal-feedback">
-          <p class="modal-feedback__lead">Мы обязательно вам ответим!</p>
-          <!-- Форма обратной связи -->
-          <form class="modal-feedback__feedback-form" action="#" method="post">
-            <input type="text" name="name-in-feedback" value="Как вас зовут?">
-            <input type="email" name="email-in-feedback" value="Ваша почта для ответа?">
-            <textarea name="feedback" rows="6">Напишите что-нибудь...</textarea>
-            <input type="submit" name="send-feedback" value="Отправить">
-          </form>
-        </div>
-
       </div>
     </section>
   </main>
@@ -257,7 +245,8 @@
     </div>
 
     <div class="main-footer__additional-info">
-      <a class="main-footer__button main-footer__button--suppliers heart_token" href="#">Для поставщиков</a>
+      <!-- main-footer__button-heart-token может и не пригодится, возможно использование ::before-->
+      <a class="main-footer__button main-footer__button--suppliers main-footer__button--heart-token" href="#">Для поставщиков</a>
       <a class="main-footer__button" href="#">Наши документы</a>
       <a class="main-footer__button" href="#">О производстве</a>
       <a class="main-footer__button" href="#">Экологические стандарты</a>
@@ -272,6 +261,18 @@
       </p>
     </div>
   </footer>
+
+  <!-- Скрытая форма -->
+  <div class="modal-feedback">
+    <p class="modal-feedback__lead">Мы обязательно вам ответим!</p>
+    <!-- Форма обратной связи -->
+    <form class="modal-feedback__feedback-form" action="#" method="post">
+      <input type="text" name="name-in-feedback" value="Как вас зовут?">
+      <input type="email" name="email-in-feedback" value="Ваша почта для ответа?">
+      <textarea name="feedback" rows="6">Напишите что-нибудь...</textarea>
+      <input type="submit" value="Отправить">
+    </form>
+  </div>
 
 </body>
 

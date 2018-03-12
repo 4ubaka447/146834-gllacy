@@ -56,7 +56,7 @@
               <input type="password" name="search" value="Пароль">
               <a class="modal-login__button" href="#">Забыли пароль?</a>
               <a class="modal-login__button" href="#">Новая регистрация</a>
-              <input type="submit" name="login" value="Войти">
+              <input type="submit" value="Войти">
             </form>
           </div>
         </li>
@@ -69,20 +69,20 @@
           <!-- Скрытый блок -->
           <div class="modal-full-card">
             <table class="modal-full-card__table card-table">
-                <tr class="card-table__row">
-                    <td class="card-table__del-position"></td>
-                    <td class="card-table__position-img-small"></td>
-                    <td class="card-table__position-name">Пломбир с апельсиновым джемом</td>
-                    <td class="card-table__position-weight"><span class="">1,5 кг х</span> 200 руб.</td>
-                    <td class="card-table__position-price">300 руб.</td>
-                </tr>
-                <tr>
-                    <td class="card-table__del-position"></td>
-                    <td class="card-table__position-img-small"></td>
-                    <td class="card-table__position-name">Клубничный пломбир с присыпкой из белого шоколада</td>
-                    <td class="card-table__position-weight"><span class="">1,5 кг х</span> 300 руб.</td>
-                    <td class="card-table__position-price">450 руб.</td>
-                </tr>
+              <tr class="card-table__row">
+                <td class="card-table__del-position"></td>
+                <td class="card-table__position-img-small"></td>
+                <td class="card-table__position-name">Пломбир с апельсиновым джемом</td>
+                <td class="card-table__position-weight"><span class="">1,5 кг х</span> 200 руб.</td>
+                <td class="card-table__position-price">300 руб.</td>
+              </tr>
+              <tr>
+                <td class="card-table__del-position"></td>
+                <td class="card-table__position-img-small"></td>
+                <td class="card-table__position-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td class="card-table__position-weight"><span class="">1,5 кг х</span> 300 руб.</td>
+                <td class="card-table__position-price">450 руб.</td>
+              </tr>
             </table>
             <span class="modal-full-card__price"></span>
             <a class="modal-full-card__button button" href="">Оформить заказ</a>
@@ -103,9 +103,11 @@
   </header>
 
   <main class="container">
-    <div class="route">
-      <p class=""><a href="index.html">Главная</a> » <a href="">Каталог</a> » <a href="">Сливочное</a></p>
-    </div>
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+      <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
+      <li class="breadcrumbs__item"><a>Сливочное</a></li>
+    </ul>
 
     <h1 class="catalog-caption">Сливочное мороженное</h1>
 
@@ -122,10 +124,9 @@
         </div>
 
         <div class="filter__price">
-          <p class="filter__name">Цена: 100 руб. – 500 руб.
-            <p>
-              <!-- в макете он двойной, его разве не на JS надо делать? оставлю пока так -->
-              <input type="range" min="100" max="500" step="1" name="price">
+          <p class="filter__name">Цена: 100 руб. – 500 руб.</p>
+          <!-- в макете он двойной, его разве не на JS надо делать? оставлю пока так -->
+          <input type="range" min="100" max="500" step="1" name="price">
         </div>
 
         <div class="filter__fat-content">
@@ -146,7 +147,7 @@
         </div>
 
         <div class="filter__start">
-          <input type="submit" name="apply" value="Применить">
+          <input type="submit" value="Применить">
         </div>
       </form>
 
@@ -157,123 +158,123 @@
       <ul class="products__list">
         <!-- 1 -->
         <li class="products__item">
-          <img class="products__image" src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+          <img class="products__image" src="img/product-1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
           <span class="products__price">310</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 2 -->
         <li class="products__item">
-          <img class="products__image" src="img/2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+          <img class="products__image" src="img/product-2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
           <span class="products__price">380</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочно-кофейное с кусочками шоколада</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 3 -->
         <li class="products__item">
-          <img class="products__image" src="img/3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+          <img class="products__image" src="img/product-3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
           <span class="products__price">355</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочно-клубничное с присыпкой из белого шоколада</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 4 -->
         <li class="products__item">
-          <img class="products__image" src="img/4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+          <img class="products__image" src="img/product-4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
           <span class="products__price">415</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочное крем-брюле с карамельной подливкой</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 5 -->
         <li class="products__item">
-          <img class="products__image" src="img/5.png" alt="Сливочное с брусничным джемом" width="267" height="267">
+          <img class="products__image" src="img/product-5.png" alt="Сливочное с брусничным джемом" width="267" height="267">
           <span class="products__price">325</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочное с брусничным джемом</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 6 -->
         <li class="products__item">
-          <img class="products__image" src="img/6.png" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
+          <img class="products__image" src="img/product-6.png" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
           <span class="products__price">410</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочно-черничное с цельными ягодами черники</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 7 -->
         <li class="products__item">
-          <img class="products__image" src="img/7.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
+          <img class="products__image" src="img/product-7.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
           <span class="products__price">375</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочно-лимонное с карамельной присыпкой</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 8 -->
         <li class="products__item">
-          <img class="products__image" src="img/8.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
+          <img class="products__image" src="img/product-8.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
           <span class="products__price">320</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочное с шоколадной стружкой</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 9 -->
         <li class="products__item">
-          <img class="products__image" src="img/9.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
+          <img class="products__image" src="img/product-9.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
           <span class="products__price">440</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочно-ванильное с кусочками шоколада</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 10 -->
         <li class="products__item">
-          <img class="products__image" src="img/10.png" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
+          <img class="products__image" src="img/product-10.png" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
           <span class="products__price">435</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочноe с ментоловым сиропом</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 11 -->
         <li class="products__item">
-          <img class="products__image" src="img/11.png" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
+          <img class="products__image" src="img/product-11.png" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
           <span class="products__price">355</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочное с кусочками черного шоколада</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 12 -->
         <li class="products__item">
-          <img class="products__image" src="img/8.png" alt="Сливочное с мятным сиропом" width="267" height="267">
+          <img class="products__image" src="img/product-12.png" alt="Сливочное с мятным сиропом" width="267" height="267">
           <span class="products__price">420</span>
           <span class="ruble">Р</span>
-          <span class="products__price--units">/кг</span>
+          <span class="products__price products__price--units">/кг</span>
           <p class="products__name">Сливочное с мятным сиропом</p>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
       </ul>
     </section>
 
-    <div class="toggles--catalog">
-      <div class="toggles__switch--left"></div>
-      <div class="toggles__item--catalog"><a href="">1</a></div>
-      <div class="toggles__item--catalog"><a href="">2</a></div>
-      <div class="toggles__item--catalog"><a href="">3</a></div>
-      <div class="toggles__item--catalog"><a href="">4</a></div>
-      <div class="toggles__item--catalog"><a href="">5</a></div>
-      <div class="toggles__switch--right"></div>
+    <div class="paginator">
+      <div class="paginator__left"><a href=""></a></div>
+      <div class="paginator__catalog"><a href="">1</a></div>
+      <div class="paginator__catalog"><a href="">2</a></div>
+      <div class="paginator__catalog"><a href="">3</a></div>
+      <div class="paginator__catalog"><a href="">4</a></div>
+      <div class="paginator__catalog"><a href="">5</a></div>
+      <div class="paginator__right"><a href=""></a></div>
     </div>
 
   </main>
@@ -297,7 +298,8 @@
     </div>
 
     <div class="main-footer__additional-info">
-      <a class="main-footer__button main-footer__button--suppliers heart_token" href="#">Для поставщиков</a>
+      <!-- main-footer__button-heart-token может и не пригодится, возможно использование ::before-->
+      <a class="main-footer__button main-footer__button--suppliers main-footer__button--heart-token" href="#">Для поставщиков</a>
       <a class="main-footer__button" href="#">Наши документы</a>
       <a class="main-footer__button" href="#">О производстве</a>
       <a class="main-footer__button" href="#">Экологические стандарты</a>
@@ -314,5 +316,4 @@
   </footer>
 
 </body>
-
 </html>
