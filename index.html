@@ -8,20 +8,22 @@
 
 <body>
   <header class="main-header">
+    <h1 class="visually-hidden">Меню сайта</h1>
     <!-- Меню навигации по сайту -->
     <nav class="main-navigation">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
       <a class="logo">
         <img src="img/logo.svg" alt="Логотип" width="154" height="64">
       </a>
       <ul class="main-navigation__list">
-        <li><a href="#">Каталог</a>
+        <li><a href="catalog.html">Каталог</a>
           <!-- Выпадающее меню -->
           <ul class="modal-branch">
             <li><a class="modal-branch__item modal-branch__item--big" href="">Новинки</a></li>
-            <li><a class="modal-branch__item" href="">Сливочное</a></li>
-            <li><a class="modal-branch__item" href="">Щербеты</a></li>
-            <li><a class="modal-branch__item" href="">Фруктовый лед</a></li>
-            <li><a class="modal-branch__item" href="">Мелорин</a></li>
+            <li><a class="modal-branch__item" href="#">Сливочное</a></li>
+            <li><a class="modal-branch__item" href="#">Щербеты</a></li>
+            <li><a class="modal-branch__item" href="#">Фруктовый лед</a></li>
+            <li><a class="modal-branch__item" href="#">Мелорин</a></li>
           </ul>
         </li>
         <li><a href="#">Доставка и оплата</a></li>
@@ -30,17 +32,27 @@
     </nav>
     <!-- Блок для пользователя. Форма поиска, логин, корзина -->
     <div class="user-interaction">
+      <h2 class="visually-hidden">Поиск по сайту, вход и корзина</h2>
       <ul class="user-interaction__list">
         <li class="user-interaction__item user-interaction__item--search">
           <button class="user-interaction__name user-interaction__name--search" type="button" name="button-search">
-            Поиск
+            <span class="visually-hidden">Открыть поиск</span>
           </button>
           <!-- Скрытый блок -->
           <div class="modal-search">
             <!-- Форма для поиска -->
-            <form action="#" method="get">
-              <input type="search" name="search" value="Что ищем?">
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <label for="nav-search" class="visually-hidden">Поиск по сайту</label>
+              <input type="search" name="nav-search" placeholder="Что ищем?" id="nav-search">
+              <!-- по идее одна и та же кнопка должна открывать попап с поиском, закрывать ее и отправлять, но я пока хз, поэтому пусть тут будет эта кнопка, с теми же классами что и для вызова формы -->
+              <button class="user-interaction__name user-interaction__name--search" type="submit">
+                  <span class="visually-hidden">Начать поиск</span>
+              </button>
             </form>
+            <!-- аналогично кнопке выше, но для закрытия формы поиска -->
+            <button class="user-interaction__name user-interaction__name--search" type="button" name="button-search" type="submit">
+                <span class="visually-hidden">Закрыть поиск</span>
+            </button>
           </div>
         </li>
 
@@ -51,13 +63,23 @@
           <!-- Скрытый блок -->
           <div class="modal-login">
             <!-- Форма входа -->
-            <form class="modal-login__login-form" action="#" method="post">
-              <input type="text" name="search" value="Электронная почта">
-              <input type="password" name="search" value="Пароль">
+            <form class="modal-login__login-form" action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="login-name">Логин</label>
+                <input type="text" name="login-name" id="login-name" placeholder="Электронная почта">
+              </p>
+              <p>
+                <label class="visually-hidden" for="login-password">Пароль</label>
+                <input type="password" name="login-password" id="login-password" placeholder="Пароль">
+              </p>
               <a class="modal-login__button" href="#">Забыли пароль?</a>
               <a class="modal-login__button" href="#">Новая регистрация</a>
-              <input type="submit" value="Войти">
+              <button class="button" type="submit">"Войти"</button>
             </form>
+            <!-- аналогично ситуации с поиском, попап же надо закрывать -->
+            <button class="user-interaction__name user-interaction__name--login" type="button" name="button-login">
+              Закрыть
+            </button>
           </div>
         </li>
 
@@ -70,6 +92,7 @@
     </div>
 
     <div class="main-header__contacts header-contacts">
+      <h2 class="visually-hidden">Контакты</h2>
       <p class="header-contacts__text">
         С 10 до 20, ежедневно
       </p>
@@ -101,9 +124,9 @@
       </ul>
 
       <div class="toggles">
-        <div class="toggles__item"></div>
-        <div class="toggles__item"></div>
-        <div class="toggles__item"></div>
+        <button class="toggles__item" type="button">Слайд 1</button>
+        <button class="toggles__item" type="button">Слайд 2</button>
+        <button class="toggles__item" type="button">Слайд 3</button>
       </div>
     </section>
 
@@ -194,16 +217,17 @@
       <h2 class="visually-hidden">Подписка</h2>
       <p class="appointment__info">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
       <!-- форма ввода почтового адреса -->
-      <form class="appointment__email-form" action="index.html" method="post">
-        <input type="email" name="email" value="Электронная почта">
-        <input type="submit" value="Отправить">
+      <form class="appointment__email-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="appointment-email">Ваша почта</label>
+        <input type="email" name="appointment-email" id="appointment-email" placeholder="Электронная почта">
+        <button class="button" type="submit">Отправить</button>
       </form>
 
     </section>
 
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <img class="map_image" src="img/map.jpg" alt="Карта" width="1200" height="430">
+      <img class="map_image" src="img/map.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
 
       <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6076806170006!2d30.320580416394204!3d59.93865188187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8gMTkvOCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1520030245728"
           width="800" height="600" style="border:0" allowfullscreen></iframe> -->
@@ -220,31 +244,34 @@
           <p class="map__info">(с 10 до 20 ежедневно)</p>
         </div>
 
-        <a class="map__button button" type="button" name="feedback-button">Форма обратной связи</a>
+        <a class="map__button button" type="button" name="feedback-button" href="#">Форма обратной связи</a>
 
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
+    <h1 class="visually-hidden">Дополнительная информация</h1>
     <div class="main-footer__social social">
+      <h2>Ссылки на социальные сети</h2>
       <ul class="main-footer__list">
         <li class="main-footer__item">
-          <a class="social__button social__button--twitter" href="#">Твиттер</a>
+          <a class="social__button social__button--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
         </li>
         <li class="main-footer__item">
-          <a class="social__button social__button--instagram" href="#">Инстаграм</a>
+          <a class="social__button social__button--instagram" href="#"><span class="visually-hidden">Инстаграм</span></a>
         </li>
         <li class="main-footer__item">
-          <a class="social__button social__button--facebook" href="#">Фейсбук</a>
+          <a class="social__button social__button--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
         </li>
         <li class="main-footer__item">
-          <a class="social__button social__button--vk" href="#">Вконтакте</a>
+          <a class="social__button social__button--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
         </li>
       </ul>
     </div>
 
     <div class="main-footer__additional-info">
+      <h2 class="visually-hidden">Дополнительная информация</h2>
       <!-- main-footer__button-heart-token может и не пригодится, возможно использование ::before-->
       <a class="main-footer__button main-footer__button--suppliers main-footer__button--heart-token" href="#">Для поставщиков</a>
       <a class="main-footer__button" href="#">Наши документы</a>
@@ -266,10 +293,19 @@
   <div class="modal-feedback">
     <p class="modal-feedback__lead">Мы обязательно вам ответим!</p>
     <!-- Форма обратной связи -->
-    <form class="modal-feedback__feedback-form" action="#" method="post">
-      <input type="text" name="name-in-feedback" value="Как вас зовут?">
-      <input type="email" name="email-in-feedback" value="Ваша почта для ответа?">
-      <textarea name="feedback" rows="6">Напишите что-нибудь...</textarea>
+    <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+          <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
+          <input type="text" name="feedback-name" id="feedback-name" placeholder="Как вас зовут?">
+      </p>
+      <p>
+          <label class="visually-hidden" for="feedback-email">Ваша почта</label>
+          <input type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
+      </p>
+      <p>
+          <label class="visually-hidden" for="feedback-text">Ваш отзыв</label>
+          <textarea name="feedback-text" id="feedback-text" rows="6" placeholder="Напишите что-нибудь..."></textarea>
+      </p>
       <input type="submit" value="Отправить">
     </form>
   </div>
