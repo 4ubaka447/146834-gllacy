@@ -19,3 +19,90 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.main-navigation__list,
+.modal-branch,
+.user-interaction__list,
+.slider__list,
+.action__list {
+    list-style: none;
+}
+
+.button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #eb573b;
+}
+
+.main-navigation__list a {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-branch a {
+    font-size: 14px;
+    line-height: 16px;
+    color: #323232;
+    border-bottom: none;
+}
+
+.modal-branch a:hover,
+.modal-branch a:focus {
+    background-color: #fbded7;
+}
+
+.modal-branch a:active {
+    background-color: #f6b5a5;
+}
+
+.modal-branch__item--big {
+    font-weight: bold;
+}
+
+.header-contacts__text {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.header-contacts__text--phone {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.slider__list h3 {
+    font-size: 60px;
+    line-height: 60.35px;
+    text-align: center;
+}
+.slider__button {
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.action__list h3 {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: bold;
+}
+
+.action__list p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.action__column1 {
+    background-color: #4c0914;
+    background-image: url("../img/bg-crimson-back.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.action__column2 {
+    background-color: #43281c;
+    background-image: url("../img/bg-chocolate-back.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}

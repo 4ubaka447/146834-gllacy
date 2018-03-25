@@ -35,7 +35,6 @@
     </nav>
     <!-- Блок для пользователя. Форма поиска, логин, корзина -->
     <div class="user-interaction">
-      <h2 class="visually-hidden">Поиск по сайту, вход и корзина</h2>
       <ul class="user-interaction__list">
         <li class="user-interaction__item user-interaction__item--search">
           <button class="user-interaction__name user-interaction__name--search" type="button" name="button-search">
@@ -47,15 +46,7 @@
             <form action="https://echo.htmlacademy.ru" method="get">
               <label for="nav-search" class="visually-hidden">Поиск по сайту</label>
               <input type="search" name="nav-search" placeholder="Что ищем?" id="nav-search">
-              <!-- по идее одна и та же кнопка должна открывать попап с поиском, закрывать ее и отправлять, но я пока хз, поэтому пусть тут будет эта кнопка, с теми же классами что и для вызова формы -->
-              <button class="user-interaction__name user-interaction__name--search" type="submit">
-                  <span class="visually-hidden">Начать поиск</span>
-              </button>
             </form>
-            <!-- аналогично кнопке выше, но для закрытия формы поиска -->
-            <button class="user-interaction__name user-interaction__name--search" type="button" name="button-search" type="submit">
-                <span class="visually-hidden">Закрыть поиск</span>
-            </button>
           </div>
         </li>
 
@@ -79,10 +70,6 @@
               <a class="modal-login__button" href="#">Новая регистрация</a>
               <button class="button" type="submit">"Войти"</button>
             </form>
-            <!-- аналогично ситуации с поиском, попап же надо закрывать -->
-            <button class="user-interaction__name user-interaction__name--login" type="button" name="button-login">
-              Закрыть
-            </button>
           </div>
         </li>
 
@@ -127,25 +114,29 @@
       </ul>
 
       <div class="toggles">
-        <button class="toggles__item" type="button">Слайд 1</button>
-        <button class="toggles__item" type="button">Слайд 2</button>
-        <button class="toggles__item" type="button">Слайд 3</button>
+        <button class="toggles__item" type="button"><span class="visually-hidden">Слайд 1</span></button>
+        <button class="toggles__item" type="button"><span class="visually-hidden">Слайд 2</span></button>
+        <button class="toggles__item" type="button"><span class="visually-hidden">Слайд 3</span></button>
       </div>
     </section>
 
     <section class="action">
       <h2 class="visually-hidden">Акции</h2>
       <ul class="action__list">
-        <li class="action__item">
-          <h3>Малинка даром!</h3>
-          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="button" href="#">Хочу варенье!</a>
-        </li>
-        <li class="action__item">
-          <h3>Шоколадки даром!</h3>
-          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="button" href="#">Хочу шоколадки!</a>
-        </li>
+        <div class="action__column1">
+          <li class="action__item">
+            <h3>Малинка даром!</h3>
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="button" href="#">Хочу варенье!</a>
+          </li>
+        </div>
+        <div class="action__column2">
+          <li class="action__item">
+            <h3>Шоколадки даром!</h3>
+            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+            <a class="button" href="#">Хочу шоколадки!</a>
+          </li>
+        </div>
       </ul>
     </section>
     <!-- Блок с товарами -->
@@ -256,7 +247,6 @@
   <footer class="main-footer">
     <h1 class="visually-hidden">Дополнительная информация</h1>
     <div class="main-footer__social social">
-      <h2>Ссылки на социальные сети</h2>
       <ul class="main-footer__list">
         <li class="main-footer__item">
           <a class="social__button social__button--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
@@ -274,7 +264,6 @@
     </div>
 
     <div class="main-footer__additional-info">
-      <h2 class="visually-hidden">Дополнительная информация</h2>
       <!-- main-footer__button-heart-token может и не пригодится, возможно использование ::before-->
       <a class="main-footer__button main-footer__button--suppliers main-footer__button--heart-token" href="#">Для поставщиков</a>
       <a class="main-footer__button" href="#">Наши документы</a>
@@ -298,16 +287,16 @@
     <!-- Форма обратной связи -->
     <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
-          <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
-          <input type="text" name="feedback-name" id="feedback-name" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
+        <input type="text" name="feedback-name" id="feedback-name" placeholder="Как вас зовут?">
       </p>
       <p>
-          <label class="visually-hidden" for="feedback-email">Ваша почта</label>
-          <input type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
+        <label class="visually-hidden" for="feedback-email">Ваша почта</label>
+        <input type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
       </p>
       <p>
-          <label class="visually-hidden" for="feedback-text">Ваш отзыв</label>
-          <textarea name="feedback-text" id="feedback-text" rows="6" placeholder="Напишите что-нибудь..."></textarea>
+        <label class="visually-hidden" for="feedback-text">Ваш отзыв</label>
+        <textarea name="feedback-text" id="feedback-text" rows="6" placeholder="Напишите что-нибудь..."></textarea>
       </p>
       <input type="submit" value="Отправить">
     </form>
