@@ -99,18 +99,24 @@
     <section class="slider">
       <h2 class="visually-hidden">Слайдер</h2>
       <ul class="slider__list">
-        <li class="slider__item">
-          <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-          <a class="slider__button button" href="#">Давайте оба!</a>
-        </li>
-        <li class="slider__item">
-          <h3>Шоколадный пломбир и лимонный сорбет</h3>
-          <a class="slider__button button" href="#">Давайте оба!</a>
-        </li>
-        <li class="slider__item">
-          <h3>Пломбир с помадкой и клубничный щербет</h3>
-          <a class="slider__button button" href="#">Давайте оба!</a>
-        </li>
+        <div class="slider__block">
+          <li class="slider__item">
+            <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+            <a class="slider__button button" href="#">Давайте оба!</a>
+          </li>
+        </div>
+        <div class="slider__block visually-hidden">
+          <li class="slider__item">
+            <h3>Шоколадный пломбир и лимонный сорбет</h3>
+            <a class="slider__button button" href="#">Давайте оба!</a>
+          </li>
+        </div>
+        <div class="slider__block visually-hidden">
+          <li class="slider__item">
+            <h3>Пломбир с помадкой и клубничный щербет</h3>
+            <a class="slider__button button" href="#">Давайте оба!</a>
+          </li>
+        </div>
       </ul>
 
       <div class="toggles">
@@ -127,14 +133,14 @@
           <li class="action__item">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="button" href="#">Хочу варенье!</a>
+            <a class="action__button button" href="#">Хочу варенье!</a>
           </li>
         </div>
         <div class="action__column2">
           <li class="action__item">
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a class="button" href="#">Хочу шоколадки!</a>
+            <a class="action__button button" href="#">Хочу шоколадки!</a>
           </li>
         </div>
       </ul>
@@ -149,7 +155,7 @@
           <span class="products__price">310</span>
           <span class="ruble">Р</span>
           <span class="products__price products__price--units">/кг</span>
-          <p class="products__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          <a class="products__name" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 2 -->
@@ -158,7 +164,7 @@
           <span class="products__price">380</span>
           <span class="ruble">Р</span>
           <span class="products__price products__price--units">/кг</span>
-          <p class="products__name">Сливочно-кофейное с кусочками шоколада</p>
+          <a class="products__name" href="#">Сливочно-кофейное с кусочками шоколада</a>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 3 -->
@@ -167,7 +173,7 @@
           <span class="products__price">355</span>
           <span class="ruble">Р</span>
           <span class="products__price products__price--units">/кг</span>
-          <p class="products__name">Сливочно-клубничное с присыпкой из белого шоколада</p>
+          <a class="products__name" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
         <!-- 4 -->
@@ -176,7 +182,7 @@
           <span class="products__price">415</span>
           <span class="ruble">Р</span>
           <span class="products__price products__price--units">/кг</span>
-          <p class="products__name">Сливочное крем-брюле с карамельной подливкой</p>
+          <a class="products__name" href="#">Сливочное крем-брюле с карамельной подливкой</a>
           <a class="products__button button" href="#">Быстрый просмотр</a>
         </li>
       </ul>
@@ -202,8 +208,7 @@
     </section>
 
     <article class="blog-news">
-      <h2 class="visually-hidden">Новое в блоге</h2>
-      <p class="blog-news__head">Новое в нашем блоге</p>
+      <h2 class="blog-news__head">Новое в нашем блоге</h2>
       <a class="blog-news__all" href="#">10 способов сервировки фруктовых щербетов к столу</a>
     </article>
 

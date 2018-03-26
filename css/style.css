@@ -24,7 +24,9 @@ body {
 .modal-branch,
 .user-interaction__list,
 .slider__list,
-.action__list {
+.action__list,
+.products__list,
+.features__list {
     list-style: none;
 }
 
@@ -82,6 +84,10 @@ body {
     line-height: 44px;
 }
 
+.slider__block {
+
+}
+
 .action__list h3 {
     font-size: 35px;
     line-height: 41px;
@@ -98,6 +104,7 @@ body {
     background-image: url("../img/bg-crimson-back.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
+    width: 50%;
 }
 
 .action__column2 {
@@ -105,4 +112,88 @@ body {
     background-image: url("../img/bg-chocolate-back.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
+    width: 50%;
+}
+
+.action__button {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.products__price {
+    font-size: 45px;
+    line-height: 45px;
+    text-shadow: 1px 1px 2px grey;
+}
+
+.ruble {
+    font-size: 45px;
+    line-height: 45px;
+    text-shadow: 1px 1px 2px grey;
+    background-image: url("../img/icon-ruble.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.products__price--units {
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.products__name {
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.products__button {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.features {
+    background-color: #eaddc1;
+    background-image: url("../img/bg-waffle.jpg");
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.features__lead {
+    font-size: 24px;
+    line-height: 30px;
+    color: #323232;
+}
+
+.features__item {
+    color: #323232;
+}
+
+/* .features__item::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-ice-cream.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px auto;
+} */
+
+.blog-news {
+    background-color: #ffffff;
+    background-image: url("../img/bg-strawberry-back.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.blog-news__head {
+    color: #323232;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.blog-news__all {
+    font-size: 24px;
+    line-height: 30px;
+    color: #323232;
+    text-decoration: none;
+    border-bottom: 2px solid #323232;
 }
